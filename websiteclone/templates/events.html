@@ -1,0 +1,56 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Events - Tasty TalKs</title>
+    <link rel="stylesheet" href="{% static 'css/events.css' %}">
+</head>
+<body>
+     <!-- Navbar -->
+     <nav class="navbar">
+        <div class="logo">Tasty TalKs</div>
+        <div class="search-bar">
+            <input type="text" placeholder="Search for restaurants, cuisines...">
+        </div>
+        <div class="auth-buttons">
+            <a href="{% url 'app1:login' %}"><button class="login">Login</button></a>
+            <a href="{% url 'app1:signup' %}"><button class="signup">Sign Up</button></a>
+            <a href="{% url 'app1:cart' %}"><button class="signup">order-online</button></a>
+            <a href="{% url 'app1:home' %}"><button class="signup">Home</button></a>
+        </div>
+    </nav>
+
+    <div class="events-container">
+        <img src="{% static 'images/eb.jpg' %}" alt="Live Event" class="event-banner">
+        <h1>Live Events at Munch Box</h1>
+        <p>Enjoy live music, comedy nights, and themed events at your favorite dining spot.</p>
+
+        <h2>Upcoming Events</h2>
+        <div class="event-list">
+            <div class="event-item">
+                <img src="{% static 'images/e1.jpg' %}" alt="Live Band Night">
+                <h3>🎸 Live Band Night</h3>
+                <p>Experience an electrifying night with live performances from top bands.</p>
+                <a href="{% url 'app1:reservation' %}"><button>Book</button></a>
+            </div>
+
+            <div class="event-item">
+                <img src="{% static 'images/e2.jpg' %}" alt="Comedy Night">
+                <h3>🎭 Comedy Night</h3>
+                <p>Laugh out loud with the best stand-up comedians in town.</p>
+                <a href="{% url 'app1:reservation' %}"><button>Book</button></a>
+            </div>
+
+            <div class="event-item">
+                <img src="{% static 'images/e3.jpg' %}" alt="DJ Party">
+                <h3>🎧 DJ Party</h3>
+                <p>Dance the night away with the hottest beats from top DJs.</p>
+                <a href="{% url 'app1:reservation' %}"><button>Book</button></a>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,75 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reserve a Table - Munch Box</title>
+    <link rel="stylesheet" href="{% static 'css/reservation.css' %}">
+</head>
+<body>
+     <!-- Navbar -->
+     <nav class="navbar">
+        <div class="logo">Tasty TalKs</div>
+        <div class="search-bar">
+            <input type="text" placeholder="Search for restaurants, cuisines...">
+        </div>
+        <div class="auth-buttons">
+            <a href="{% url 'app1:login' %}"><button class="login">Login</button></a>
+            <a href="{% url 'app1:signup' %}"><button class="signup">Sign Up</button></a>
+            <a href="{% url 'app1:cart' %}"><button class="signup">order-online</button></a>
+            <a href="{% url 'app1:home' %}"><button class="signup">Home</button></a>
+        </div>
+    </nav>
+
+    <div class="reservation-container">
+        <h2>Reserve a Table</h2>
+        <form id="reservation-form">
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+            <label for="date">Select Date:</label>
+            <input type="date" id="date" name="date" required>
+
+            <label for="time">Select Time:</label>
+            <input type="time" id="time" name="time" required>
+
+            <label for="guests">Number of Guests:</label>
+            <select id="guests" name="guests">
+                <option value="1">1 Guest</option>
+                <option value="2">2 Guests</option>
+                <option value="3">3 Guests</option>
+                <option value="4">4 Guests</option>
+                <option value="5">5 Guests</option>
+                <option value="6">6 Guests</option>
+                <option value="7">7 Guests</option>
+                <option value="8">8 Guests</option>
+            </select>
+
+            <button type="submit">Reserve Now</button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById("reservation-form").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent actual form submission
+
+            const name = document.getElementById("name").value;
+            const date = document.getElementById("date").value;
+            const time = document.getElementById("time").value;
+            const guests = document.getElementById("guests").value;
+
+            alert(`Table reserved successfully for ${name} on ${date} at ${time} for ${guests} guests.`);
+            
+            // You can add code here to send reservation data to a backend system
+        });
+    </script>
+
+</body>
+</html>

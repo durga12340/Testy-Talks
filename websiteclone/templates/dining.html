@@ -1,0 +1,41 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dining Experience - Tasty TalKs</title>
+    <link rel="stylesheet" href="{% static 'css/dining.css' %}">
+</head>
+<body>
+     <!-- Navbar -->
+     <nav class="navbar">
+        <div class="logo">Tasty TalKs</div>
+        <div class="search-bar">
+            <input type="text" placeholder="Search for restaurants, cuisines...">
+        </div>
+        <div class="auth-buttons">
+            <a href="{% url 'app1:login' %}"><button class="login">Login</button></a>
+            <a href="{% url 'app1:signup' %}"><button class="signup">Sign Up</button></a>
+            <a href="{% url 'app1:cart' %}"><button class="signup">order-online</button></a>
+            <a href="{% url 'app1:home' %}"><button class="signup">Home</button></a>
+        </div>
+    </nav>
+
+    <div class="dining-container">
+        <img src="{% static 'images/dining.jpg' %}" alt="Dining Area" class="dining-main-image">
+        <h1>Exclusive Dining at AB’s Absolute Barbecue</h1>
+        <p>Experience the finest dining ambiance with world-class service and a menu curated for food lovers.</p>
+
+        <h2>Gallery</h2>
+        <div class="dining-gallery">
+            <img src="{% static 'images/d1.jpg' %}" alt="Dining Setup 1">
+            <img src="{% static 'images/d2.jpg' %}" alt="Dining Setup 2">
+            <img src="{% static 'images/d3.jpg' %}" alt="Dining Setup 3">
+        </div>
+
+        <a href="{% url 'app1:reservation' %}"><button>Reservation</button></a>
+    </div>
+
+</body>
+</html>

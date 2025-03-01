@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Details - Munch Box</title>
+    <link rel="stylesheet" href="../static/css/restaruant.css">
+</head>
+<body>
+     <!-- Navbar -->
+     <nav class="navbar">
+        <div class="logo">Tasty TalKs</div>
+        <div class="search-bar">
+            <input type="text" placeholder="Search for restaurants, cuisines...">
+        </div>
+        <div class="auth-buttons">
+            <a href="{% url 'app1:login' %}"><button class="login">Login</button></a>
+            <a href="{% url 'app1:signup' %}"><button class="signup">Sign Up</button></a>
+            <a href="{% url 'app1:cart' %}"><button class="signup">order-online</button></a>
+            <a href="{% url 'app1:home' %}"><button class="signup">Home</button></a>
+        </div>
+    </nav>
+
+    <div class="restaurant-detail-container">
+        <img src="../static/images/r1.jpg" alt="AB’s Absolute Barbecue" class="restaurant-image">
+        <h1>AB’s Absolute Barbecue</h1>
+        <p><strong>⭐ 4.5</strong> • Italian, Pizza</p>
+        <p>Enjoy the best Italian and barbecue flavors in a cozy ambiance.</p>
+
+        <h2>Menu</h2>
+        <ul class="menu-list">
+            <li>
+                <img src="../static/images/PIZZA-MARGHERITA.jpg" alt="Margherita Pizza">
+                <span>Margherita Pizza - ₹250</span>
+            </li>
+            <li>
+                <img src="../static/images/BBQ Chicken Wings.jpg" alt="BBQ Chicken Wings">
+                <span>BBQ Chicken Wings - ₹300</span>
+            </li>
+            <li>
+                <img src="../static/images/Penne-Alfredo.jpg" alt="Pasta Alfredo">
+                <span>Pasta Alfredo - ₹280</span>
+            </li>
+            <li>
+                <img src="../static/images/Grilled Salmon.jpg" alt="Grilled Salmon">
+                <span>Grilled Salmon - ₹500</span>
+            </li>
+        </ul>
+
+        <a href="{% url 'app1:reservation' %}"><button>Reservation</button></a>
+
+    </div>
+
+</body>
+</html>

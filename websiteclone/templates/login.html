@@ -1,0 +1,34 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Tasty TalKs</title>
+    <link rel="stylesheet" href="{% static 'css/login.css' %}"> 
+</head>
+<body>
+    
+
+    <!-- Login Container -->
+    <div class="login-container">
+        <h2>Login to Tasty TalKs</h2>
+        <p>Discover the best food & drinks around you</p>
+
+        <form method="POST" action="{% url 'app1:profile' %}">
+            {% csrf_token %}
+            <input type="email" name="email" placeholder="Enter Email" required>
+            <input type="password" name="password" placeholder="Enter Password" required>
+            <button type="submit">Login</button>
+        </form>
+
+        <p>New to Munch Box? <a href="{% url 'app1:signup' %}">Create an account</a></p>
+
+        <div class="social-login">
+            <button class="google-login">Continue with Google</button>
+            <button class="facebook-login">Continue with Facebook</button>
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,116 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: hsl(0, 89%, 48%);
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #33ffcf;
+    padding: 15px 30px;
+    color: white;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.search-bar input {
+    padding: 8px;
+    width: 250px;
+    border-radius: 6px;
+    border: none;
+}
+
+.auth-buttons button {
+    margin-left: 10px;
+    padding: 9px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.login {
+    background-color: white;
+    color: #ff5733;
+}
+
+.signup {
+    background-color: black;
+    color: white;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    background: url('/static/images/Res_1\ -\ Copy.webp') no-repeat center center/cover;
+    color: white;
+    padding: 80px 25px;
+}
+
+.search-box input {
+    padding: 15px;
+    width: 400px;
+    border-radius: 7px;
+    border: none;
+}
+
+.search-box button {
+    padding: 10px 20px;
+    background-color: #ff5733;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Restaurant Listings */
+.restaurant-list {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.restaurant-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.restaurant {
+    background: #ffffff;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 350px;
+}
+
+.restaurant img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.restaurant button {
+    margin-top: 10px;
+    padding: 8px 15px;
+    background-color: #ff5733;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 25px;
+    background-color: #222;
+    color: white;
+}

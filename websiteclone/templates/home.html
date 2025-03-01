@@ -1,0 +1,67 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tasty TalKs</title>
+    <link rel="stylesheet" href="{% static 'css/Styles.css' %}">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">Tasty TalKs</div>
+        <div class="search-bar">
+            <input type="text" placeholder="Search for restaurants, cuisines...">
+        </div>
+        <div class="auth-buttons">
+            <a href="{% url 'app1:login' %}"><button class="login">Login</button></a>
+            <a href="{% url 'app1:signup' %}"><button class="signup">Sign Up</button></a>
+            <a href="{% url 'app1:cart' %}"><button class="signup">order-online</button></a>
+            <a href="{% url 'app1:home' %}"><button class="signup">Home</button></a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <h1>Find the best restaurants, cafés, and bars</h1>
+        <div class="search-box">
+            <input type="text" placeholder="Search for food, places...">
+            <button>Search</button>
+        </div>
+    </header>
+
+    <!-- Restaurant Listings -->
+    <section class="restaurant-list">
+        <h2>Awaiting your choices</h2>
+        <div class="restaurant-container">
+            <div class="restaurant">
+                <img src="{% static 'images/italian_image.avif' %}" alt="Restaurant 1">
+                <h3>Restaurants</h3>
+                <a href="{% url 'app1:restaruant' %}"><button>Restaruant</button></a>               
+            </div>
+    
+            <div class="restaurant">
+                <img src="{% static 'images/chines_image.jpg' %}" alt="Restaurant 7">
+                <h3>Dining</h3>
+                <a href="{% url 'app1:dining' %}"><button>Dining</button></a>
+                
+            </div>
+    
+            <div class="restaurant">
+                <img src="{% static 'images/e1.jpg' %}" alt="Restaurant 8">
+                <h3>Live Events</h3>
+                <a href="{% url 'app1:events' %}"><button>Events</button></a>
+                
+            </div>
+        </div>
+    </section>
+        <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Tasty TalKs. All rights reserved.</p>
+        <h2><i>Facebook | Instagram</i></h2>
+    </footer>
+
+</body>
+</html>

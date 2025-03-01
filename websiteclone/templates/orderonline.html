@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Online | Zomato Clone</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/orderonline.css' %}"> 
+</head>
+<body>
+    
+
+     <!-- Navbar -->
+     <nav class="navbar">
+        <div class="logo">Tasty TalKs</div>
+        <div class="search-bar">
+            <input type="text" placeholder="Search for restaurants, cuisines...">
+        </div>
+        <div class="auth-buttons">
+            <a href="{% url 'app1:login' %}"><button class="login">Login</button></a>
+            <a href="{% url 'app1:signup' %}"><button class="signup">Sign Up</button></a>
+            <a href="{% url 'app1:cart' %}"><button class="signup">order-online</button></a>
+            <a href="{% url 'app1:home' %}"><button class="signup">Home</button></a>
+        </div>
+    </nav>
+    </nav>
+
+    <!-- Order Online Section -->
+    <section class="order-online">
+        <h2>Order Food Online</h2>
+        <div class="food-grid">
+            <div class="food-card">
+                <img src="{% static 'images/pizza.jpg' %}" alt="Pizza">
+                <h3>Margherita Pizza</h3>
+                <p>Cheesy classic with fresh tomatoes</p>
+                <span>₹299</span>
+                <button>Add to Cart</button>
+            </div>
+
+            <div class="food-card">
+                <img src="{% static 'images/burger.jpg' %}" alt="Burger">
+                <h3>Chicken Burger</h3>
+                <p>Juicy grilled chicken patty</p>
+                <span>₹299</span>
+                <button>Add to Cart</button>
+            </div>
+
+            <div class="food-card">
+                <img src="{% static 'images/biriyani.jpeg' %}" alt="Biryani">
+                <h3>Hyderabadi Biryani</h3>
+                <p>Authentic flavors of spices & basmati rice</p>
+                <span>₹349</span>
+                <button>Add to Cart</button>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>
